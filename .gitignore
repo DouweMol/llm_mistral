@@ -1,0 +1,27 @@
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment folders
+.venv/
+env/
+
+# Output directory
+output/
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Docs folder
+docs/
+
+# Models folder
+models/
+
+# Allow essential files
+!requirements.txt
+!README.md
