@@ -17,13 +17,13 @@ script_dir = Path(__file__).resolve().parent
 model_path = script_dir.parent / "models" / "mistral" / "mistral-7b-instruct-v0.2.Q4_K_M.gguf"
 
 # Initialiseer de Llama-wrapper met het model
-llm = Llama(model_path=str(model_path), n_ctx=2048)
+llm = Llama(model_path=str(model_path), n_ctx=2048, n_threads=8)
 
 # Geef een prompt
 prompt = "Wat is de hoofdstad van Nederland?"
 
 # Genereer een antwoord
-output = llm(prompt)
+output = llm(prompt, max_tokens=128, stop=["</s>"])
 
 # Print het antwoord (de gegenereerde tekst)
 print("Antwoord:", output['choices'][0]['text'].strip())

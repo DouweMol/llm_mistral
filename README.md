@@ -1,4 +1,4 @@
-# Python Practice
+# Local LLM project
 
 This project uses the `llama-cpp-python` library with a local Mistral model for LLM tasks.
 
