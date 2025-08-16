@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: llm_mistral_app
+    volumes:
+      - .:/app
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python scripts/main.py
+    # ports:
+    #   - "8000:8000"  # Uncomment and adjust if your app exposes a port
