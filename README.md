@@ -36,13 +36,13 @@ python scripts/main.py
 
 ## Setup (Docker - CPU)
 
-1. Build the container
+1. Build the container: 
 docker compose build
 
-2. Start the service
+2. Start the service:
 docker compose up
 
-3. Run the script inside the container
+3. Run the script inside the container:
 docker compose run --rm app python scripts/main.py
 
 ## Setup (Docker - GPU with CUDA)
