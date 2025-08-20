@@ -20,7 +20,7 @@ model_path = script_dir.parent / "models" / "mistral" / "mistral-7b-instruct-v0.
 llm = Llama(model_path=str(model_path), n_ctx=2048, n_threads=8)
 
 # Geef een prompt
-prompt = "Wat is de hoofdstad van Nederland?"
+prompt = "Wat zijn leuke highlights in Amersfoort?"
 
 # Genereer een antwoord
 output = llm(prompt, max_tokens=128, stop=["</s>"])
